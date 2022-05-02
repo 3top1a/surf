@@ -8,3 +8,4 @@ make
 make install
 if problem
 git gud
+also run with tabbed
