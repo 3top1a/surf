@@ -61,7 +61,7 @@ static int winsize[] = { 800, 600 };
 static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
                                     WEBKIT_FIND_OPTIONS_WRAP_AROUND;
 
-#define PROMPT_GO   "Goto statements are great:"
+#define PROMPT_GO   "A case for the goto statement:"
 #define PROMPT_FIND "Find me some:"
 
 /*#define QSEARCH { \
@@ -82,9 +82,9 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
 
 /* DOWNLOAD(URI, referer) */
 #define DOWNLOAD(u, r) { \
-        .v = (const char *[]){ "st", "-e", "/bin/sh", "-c",\
-             "curl -g -L -J -O -A \"$1\" -b \"$2\" -c \"$2\"" \
-             " -e \"$3\" \"$4\"; read", \
+        .v = (const char *[]){ "st", "-g", "84x8", "-e", "/bin/sh", \
+             "-c", "cd /tmp/; curl -g -L -J -O -A \"$1\" -b \"$2\" -c \"$2\"" \
+             " -e \"$3\" \"$4\"; echo; echo '--- Finished ---'; sleep 1; exit;", \
              "surf-download", useragent, cookiefile, r, u, NULL \
         } \
 }
