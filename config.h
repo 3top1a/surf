@@ -1,6 +1,6 @@
 /* modifier 0 means no modifier */
 static int surfuseragent    = 1;  /* Append Surf version to default WebKit user agent */
-static char *fulluseragent  = ""; /* Or override the whole user agent string */
+static char *fulluseragent  = "Mozilla/5.0 (Linux; {Android Version}; {Build Tag etc.})\nAppleWebKit/{WebKit Rev} (KHTML, like Gecko)\nChrome/{Chrome Rev} Mobile Safari/{WebKit Rev}"; /* Or override the whole user agent string */
 static char *scriptfile     = "~/.surf/script.js";
 static char *styledir       = "~/.surf/styles/";
 static char *certdir        = "~/.surf/certificates/";
@@ -46,7 +46,7 @@ static Parameter defconfig[ParameterLast] = {
 	[SpellLanguages]      =       { { .v = ((char *[]){ "en_US", NULL }) }, },
 	[StrictTLS]           =       { { .i = 1 },     },
 	[Style]               =       { { .i = 1 },     },
-	[WebGL]               =       { { .i = 0 },     },
+	[WebGL]               =       { { .i = 1 },     },
 	[ZoomLevel]           =       { { .f = 1.0 },   },
 	[ClipboardNotPrimary] =       { { .i = 1 },		},
 };
